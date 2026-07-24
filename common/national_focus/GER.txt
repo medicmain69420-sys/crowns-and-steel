@@ -1,0 +1,273 @@
+################################################
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+### search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+### search_filters = {FOCUS_FILTER_INTERNATIONAL_TRADE}
+### search_filters = {FOCUS_FILTER_HISTORICAL}
+
+# CONSTANT FOR INNER CIRCLE TIMES (This is Focus cost so x7 to get the days) - THE CONSTANTS USED IN THE EVENT FILE need to be these values x7
+@inner_circle_time_tier_1 = 20
+@inner_circle_time_tier_2 = 20
+@inner_circle_time_tier_3 = 40
+
+focus_tree = {
+	id = german_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+
+	initial_show_position = {
+		x = 76
+		y = 0
+	}	
+
+
+
+ ##########################################
+
+
+
+
+	focus = {
+		id = GER_the_workers_state
+		icon = GFX_goal_support_communism
+		
+		x = 45
+		y = 0
+		cost = 5
+
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+			add_political_power = 50
+			set_variable = { ger_goverment_pp = -0.10 }
+			set_variable = { ger_government_stab = -0.40 }
+			set_variable = { ger_fascism_drift_dm = 0.05 }
+			set_variable = { ger_stability_weekly = -0.05 }
+		}
+	}
+	focus = {
+		id = GER_purge_the_party
+		icon = GFX_focus_SOV_the_last_purge
+		prerequisite = { focus = GER_the_workers_state }
+		cost = 5
+		 relative_position_id = GER_the_workers_state
+         x = 0
+         y = 1      
+
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+			add_stability = 0.10
+			remove_ideas = GER_right_opposition
+			add_dynamic_modifier = {
+              modifier = ger_government_stability
+			}
+		}
+	}
+	focus = {
+		id = GER_kick_every_door
+		icon = GFX_focus_AFG_work_with_german_inteligence
+		prerequisite = { focus = GER_purge_the_party }
+		cost = 5
+		 relative_position_id = GER_purge_the_party
+         x = 2
+         y = 1      
+
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+            custom_effect_tooltip = ger_feuhfysfhus
+
+			add_stability = -0.10
+			add_to_variable = { ger_stability_weekly = 0.075 }         
+		}
+	}
+		focus = {
+		id = GER_restrict_media
+		icon = GFX_focus_ARG_legitimize_the_PCA
+		prerequisite = { focus = GER_purge_the_party }
+		cost = 5
+		 relative_position_id = GER_purge_the_party
+         x = 0
+         y = 1      
+
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+            custom_effect_tooltip = ger_feuhfysfhus
+
+			add_stability = -0.050
+			add_to_variable  = { ger_stability_weekly = 0.075 }      
+			add_to_variable  = { ger_goverment_pp = 0.05 }        
+		}
+	}
+		focus = {
+		id = GER_eliminate_politicians
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		prerequisite = { focus = GER_purge_the_party }
+		cost = 5
+		 relative_position_id = GER_purge_the_party
+         x = -2
+         y = 1      
+
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+            custom_effect_tooltip = ger_feuhfysfhus
+
+			add_stability = -0.050
+			add_to_variable  = { ger_stability_growth_com = -0.075 }             
+		}
+	}
+	focus = {
+		id = GER_aristocratic_question
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = GER_the_workers_state }
+		cost = 5
+		 relative_position_id = GER_the_workers_state
+         x = -10
+         y = 1      
+
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+         
+		}
+	}
+	focus = {
+		id = GER_the_red_terror
+		icon = GFX_focus_SOV_military_purge
+		prerequisite = { focus = GER_aristocratic_question }
+		cost = 5
+		 relative_position_id = GER_aristocratic_question
+         x = -2
+         y = 1      
+        mutually_exclusive = { focus = GER_red_officer_compromise }
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+         retire_character  = GER_erwin_rommel
+		 retire_character  = GER_ferdinand_schorner
+		}
+	}
+	focus = {
+		id = GER_red_officer_compromise
+		icon = GFX_focus_PRC_army_command
+		prerequisite = { focus = GER_aristocratic_question }
+		cost = 5
+		 relative_position_id = GER_aristocratic_question
+         x = 2
+         y = 1      
+        mutually_exclusive = { focus = GER_the_red_terror }
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+         
+		}
+	}
+	focus = {
+		id = GER_political_comissars
+		icon = GFX_focus_GER_proletarian_solidarity
+		prerequisite = { focus = GER_the_red_terror }
+		cost = 5
+		 relative_position_id = GER_the_red_terror
+         x = -1
+         y = 1      
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+         
+		}
+	}
+	focus = {
+		id = GER_promote_rank_file
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		prerequisite = { focus = GER_the_red_terror }
+		cost = 5
+		 relative_position_id = GER_the_red_terror
+         x = 1
+         y = 1      
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+         
+		}
+	}
+	focus = {
+		id = GER_the_iron_vow
+		icon = GFX_focus_ARG_centralize_power
+		prerequisite = { focus = GER_red_officer_compromise }
+		cost = 5
+		 relative_position_id = GER_red_officer_compromise
+         x = 1
+         y = 1      
+		available = {
+			tag = GER
+		}
+		completion_reward = {
+         
+		}
+	}
+	focus = {
+		id = GER_reeducated_strategists
+		icon = GFX_focus_PRC_army_doctrines
+		prerequisite = { focus = GER_red_officer_compromise }
+		cost = 5
+		 relative_position_id = GER_red_officer_compromise
+         x = -1
+         y = 1      
+		available = {
+			tag = GER
+		}
+        mutually_exclusive = { focus = GER_the_iron_vow }
+		completion_reward = {
+         
+		}
+	}
+	focus = {
+		id = GER_reorganise_army
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = GER_reeducated_strategists  focus = GER_the_iron_vow }
+		prerequisite = { focus = GER_political_comissars }
+		prerequisite = { focus = GER_promote_rank_file }
+		cost = 5
+		 relative_position_id = GER_reeducated_strategists
+         x = -1
+         y = 1      
+		available = {
+			tag = GER
+		}
+        mutually_exclusive = { focus = GER_the_iron_vow }
+		completion_reward = {
+         
+		}
+	}
+}

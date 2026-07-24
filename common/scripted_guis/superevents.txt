@@ -1,0 +1,195 @@
+scripted_gui = {
+  new_scripted_gui = {
+    window_name = "superevents"
+    context_type = player_context
+
+    visible = {
+		has_global_flag = SE_superevents_activate
+    }
+
+    effects = {
+		superevents_button_click = {
+			clr_global_flag = SE_superevents_activate
+			#superevents
+			clr_global_flag = SE_spanish_civilwar
+			clr_global_flag = SE_sinojap_war
+			clr_global_flag = SE_world_war_ii
+			clr_global_flag = SE_gerpol_war
+			clr_global_flag = SE_winter_war
+			clr_global_flag = SE_gersov_war
+			clr_global_flag = SE_pacific_war
+			clr_global_flag = SE_fall_france
+			clr_global_flag = SE_fall_uk
+			clr_global_flag = SE_fall_usa
+			clr_global_flag = SE_fall_germany
+			clr_global_flag = SE_fall_italy
+			clr_global_flag = SE_fall_japan
+			clr_global_flag = SE_fall_soviet
+			clr_global_flag = SE_fall_china
+			clr_global_flag = SE_unification_china_cpc
+			clr_global_flag = SE_unification_china_kmt
+			clr_global_flag = SE_unification_china_warlord
+			clr_global_flag = SE_sinosov_war
+			clr_global_flag = SE_greater_german_reich_himmler
+			clr_global_flag = SE_greater_german_reich_hitler
+			clr_global_flag = SE_kaiserreich_ii
+			clr_global_flag = SE_kaiserreich_iii
+			clr_global_flag = SE_victoria
+			clr_global_flag = SE_eastwest_war
+			clr_global_flag = SE_radicals_uk
+			clr_global_flag = SE_us_civilwar
+			clr_global_flag = SE_unification_usa_communism
+			clr_global_flag = SE_unification_usa_fascism
+			clr_global_flag = SE_trotsky
+			clr_global_flag = SE_czech
+			clr_global_flag = SE_bm_axis
+			clr_global_flag = SE_french_empire
+			clr_global_flag = SE_french_communism
+			clr_global_flag = SE_anarchy
+			clr_global_flag = SE_carlist
+			clr_global_flag = SE_unification_rome
+		}
+    }
+
+    triggers = {
+		supereventsbg_test_visible = {
+			has_global_flag = SE_test
+		}
+		#superevents
+		superevents_spanish_civilwar_visible = {
+			has_global_flag = SE_spanish_civilwar
+		}
+		superevents_sinojap_war_visible = {
+			has_global_flag = SE_sinojap_war
+		}
+		superevents_world_war_ii_visible = {
+			OR = {
+				has_global_flag = SE_world_war_ii
+				has_global_flag = SE_gerpol_war
+			}
+		}
+		superevents_winter_war_visible = {
+			has_global_flag = SE_winter_war
+		}
+		superevents_gersov_war_visible = {
+			has_global_flag = SE_gersov_war
+		}
+		superevents_pacific_war_visible = {
+			has_global_flag = SE_pacific_war
+		}
+		superevents_fall_france_visible = {
+			has_global_flag = SE_fall_france
+		}
+		superevents_fall_uk_visible = {
+			has_global_flag = SE_fall_uk
+		}
+		superevents_fall_usa_visible = {
+			has_global_flag = SE_fall_usa
+		}
+		superevents_fall_germany_visible = {
+			has_global_flag = SE_fall_germany
+		}
+		superevents_fall_italy_visible = {
+			has_global_flag = SE_fall_italy
+		}
+		superevents_fall_japan_visible = {
+			has_global_flag = SE_fall_japan
+		}
+		superevents_fall_soviet_visible = {
+			has_global_flag = SE_fall_soviet
+		}
+		superevents_fall_china_visible = {
+			has_global_flag = SE_fall_china
+		}
+		superevents_unification_china_cpc_visible = {
+			has_global_flag = SE_unification_china_cpc
+		}
+		superevents_unification_china_kmt_visible = {
+			has_global_flag = SE_unification_china_kmt
+		}
+		superevents_unification_china_warlord_visible = {
+			has_global_flag = SE_unification_china_warlord
+		}
+		superevents_sinosov_war_visible = {
+			has_global_flag = SE_sinosov_war
+		}
+		superevents_greater_german_reich_himmler_visible = {
+			has_global_flag = SE_greater_german_reich_himmler
+		}
+		superevents_greater_german_reich_hitler_visible = {
+			has_global_flag = SE_greater_german_reich_hitler
+		}
+		superevents_kaiserreich_ii_visible = {
+			has_global_flag = SE_kaiserreich_ii
+		}
+		superevents_kaiserreich_iii_visible = {
+			has_global_flag = SE_kaiserreich_iii
+		}
+		superevents_victoria_visible = {
+			has_global_flag = SE_victoria
+		}
+		superevents_eastwest_war_visible = {
+			has_global_flag = SE_eastwest_war
+		}
+		superevents_radicals_uk_visible = {
+			has_global_flag = SE_radicals_uk
+		}
+		superevents_us_civilwar_visible = {
+			has_global_flag = SE_us_civilwar
+		}
+		superevents_unification_usa_communism_visible = {
+			has_global_flag = SE_unification_usa_communism
+		}
+		superevents_unification_usa_fascism_visible = {
+			has_global_flag = SE_unification_usa_fascism
+		}
+		superevents_trotsky_visible = {
+			has_global_flag = SE_trotsky
+		}
+		superevents_czech_visible = {
+			has_global_flag = SE_czech
+		}
+		superevents_bm_axis_visible = {
+			has_global_flag = SE_bm_axis
+		}
+		superevents_french_empire_visible = {
+			has_global_flag = SE_french_empire
+		}
+		superevents_french_communism_visible = {
+			has_global_flag = SE_french_communism
+		}
+		superevents_anarchy_visible = {
+			has_global_flag = SE_anarchy
+		}
+		superevents_carlist_visible = {
+			has_global_flag = SE_carlist
+		}
+		superevents_unification_rome_visible = {
+			has_global_flag = SE_unification_rome
+		}
+		
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+	
+    ai_check = {
+    }
+	
+    ai_check_scope = {
+    }
+	
+    ai_weights = {
+    }
+  }
+}

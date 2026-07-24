@@ -1,0 +1,270 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = usa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = USA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	shared_focus = ABDA_abdacom
+	default = no
+
+	focus = {
+		id = usa_the_johnson_presidency
+		icon = GFX_focus_generic_self_management
+		x = 14
+		y = 0
+		cost = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		offset = {
+			x = -1
+			y = 0
+		}
+	}
+
+	focus = {
+		id = reorganise_the_sothern_railroads
+		icon = GFX_focus_generic_railroad
+		x = 14
+		y = 0
+		cost = 5
+		prerequisite = { focus = usa_the_johnson_presidency }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = usa_the_johnson_presidency
+		x = -2s
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+			build_railway = {
+				path = { 10337 12341 5022 6798 12728 8064 4955 9671 9637 3840 986 6881 11859 9814}
+			}			
+		}
+	}
+	focus = {
+		id = crack_down_on_corruption
+		icon = GFX_focus_ARG_anti_corruption_policies
+		x = 14
+		y = 0
+		cost = 5
+		prerequisite = { focus = usa_the_johnson_presidency }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = usa_the_johnson_presidency
+		x = 0
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+ 		USA_congress_medium_opposition = yes        
+		}
+	}
+	focus = {
+		id = never_another_great_war
+		icon = GFX_goal_USA_isolationism
+		x = 14
+		y = 0
+		cost = 5
+		prerequisite = { focus = usa_the_johnson_presidency }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = usa_the_johnson_presidency
+		x = 2
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+ 		add_ideas  = { 
+			downsized_army
+		}        
+		}
+	}
+	focus = {
+		id = electrify_rural
+		icon = GFX_focus_generic_electrification
+		cost = 5
+		prerequisite = { focus = reorganise_the_sothern_railroads }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = reorganise_the_sothern_railroads
+		x = 0
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+        381 = {
+        add_building_construction = {
+            type = energy_infrastructure
+            level = 1
+            instant_build = yes
+        }
+		}
+        382 = {
+        add_building_construction = {
+            type = energy_infrastructure
+            level = 1
+            instant_build = yes
+        }
+		}
+        1085 = {
+        add_building_construction = {
+            type = energy_infrastructure
+            level = 1
+            instant_build = yes
+        }
+		}
+        659 = {
+        add_building_construction = {
+            type = energy_infrastructure
+            level = 1
+            instant_build = yes
+        }
+		}
+    }
+	}
+	focus = {
+		id = secure_the_mandate
+		icon = GFX_focus_usa_recruit_the_free_corps
+		cost = 5
+		prerequisite = { focus = crack_down_on_corruption }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = crack_down_on_corruption
+		x = 0
+		y = 1
+
+		offset = {
+			x = 0
+			y = 0
+		}
+		completion_reward = {
+		    custom_effect_tooltip = stronger_mandate_to_leadere_tt     
+		}
+	}
+	focus = {
+		id = strengthen_minority_rights
+		icon = GFX_goal_civil_rights
+		cost = 5
+		prerequisite = { focus = secure_the_mandate }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = secure_the_mandate
+		x = 2
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+		    custom_effect_tooltip = stronger__african_resistance_tt    
+ 		    	USA_congress_medium_opposition = yes         
+		}
+	}
+	focus = {
+		id = strengthen_women_rghts
+		icon = GFX_focus_PER_women_vote
+		cost = 5
+		prerequisite = { focus = secure_the_mandate }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = secure_the_mandate
+		x = 0
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+ 		USA_congress_small_support = yes        
+		}
+	}
+}
+focus_tree = {
+	id = usa_focus_civil_war
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+		
+		modifier = {
+			add = 9
+			original_tag = USA
+		}
+	}
+	
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	focus = {
+		id = the_sinking_titanic
+		icon = GFX_goal_sinking_titanic
+		cost = 5 
+		x = 10
+		y = 10
+
+		completion_reward = {
+			USA_congress_small_support = yes        
+		}
+	}	
+}

@@ -1,0 +1,17 @@
+characters = {
+	COM_tung_sahur = {
+	name = COM_tung_sahur
+	portraits = {
+		civilian = {
+			large = GFX_portrait_COM_tung_sahur
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { stalin_heart_of_steel }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+	}
+}
+	

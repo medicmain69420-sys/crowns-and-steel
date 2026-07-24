@@ -1,0 +1,30 @@
+characters={
+	ALT_tsarevich_alexi = {
+		name = "Alexi Nikolaevich" 
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ALT_tsarovich_alexi
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1940.1.1.1"
+			id = 10842
+		    traits = { young_and_foolish }
+		}
+	}
+	ALT_samuil_yufit = {
+		name = "Samuil Yufit" 
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Samuil_Yufit
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1944.1.1.1"
+			id = -1
+		}
+	}
+}
+	

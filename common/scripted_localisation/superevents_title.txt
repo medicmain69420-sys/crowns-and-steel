@@ -1,0 +1,234 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+#>be me
+#>spend an hour pondering why the localisation doesn't work
+#>discovered that i spelled the folder name wrong
+
+#text = {
+#	trigger = {
+#		has_global_flag = SE_
+#	}
+#	localization_key = SE__title
+#}
+
+defined_text = {
+	name = GetSupereventsTitle
+	text = {
+		trigger = {
+			has_global_flag = SE_spanish_civilwar
+		}
+		localization_key = SE_spanish_civilwar_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_sinojap_war
+		}
+		localization_key = SE_sinojap_war_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_world_war_ii
+		}
+		localization_key = SE_world_war_ii_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_gerpol_war
+		}
+		localization_key = SE_gerpol_war_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_winter_war
+		}
+		localization_key = SE_winter_war_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_gersov_war
+		}
+		localization_key = SE_gersov_war_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_pacific_war
+		}
+		localization_key = SE_pacific_war_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_france
+		}
+		localization_key = SE_fall_france_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_usa
+		}
+		localization_key = SE_fall_usa_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_uk
+		}
+		localization_key = SE_fall_uk_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_germany
+		}
+		localization_key = SE_fall_germany_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_italy
+		}
+		localization_key = SE_fall_italy_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_japan
+		}
+		localization_key = SE_fall_japan_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_soviet
+		}
+		localization_key = SE_fall_soviet_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_china
+		}
+		localization_key = SE_fall_china_title
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = SE_unification_china_cpc
+				has_global_flag = SE_unification_china_kmt
+				has_global_flag = SE_unification_china_warlord
+			}
+		}
+		localization_key = SE_unification_china_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_sinosov_war
+		}
+		localization_key = SE_sinosov_war_title
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = SE_greater_german_reich_himmler
+				has_global_flag = SE_greater_german_reich_hitler
+			}
+		}
+		localization_key = SE_greater_german_reich_title
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = SE_kaiserreich_ii
+				has_global_flag = SE_kaiserreich_iii
+			}
+			
+		}
+		localization_key = SE_kaiserreich_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_victoria
+		}
+		localization_key = SE_victoria_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_eastwest_war
+		}
+		localization_key = SE_eastwest_war_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_radicals_uk
+		}
+		localization_key = SE_radicals_uk_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_us_civilwar
+		}
+		localization_key = SE_us_civilwar_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_unification_usa_communism
+		}
+		localization_key = SE_unification_usa_communism_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_unification_usa_fascism
+		}
+		localization_key = SE_unification_usa_fascism_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_trotsky
+		}
+		localization_key = SE_trotsky_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_czech
+		}
+		localization_key = SE_czech_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_bm_axis
+		}
+		localization_key = SE_bm_axis_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_french_empire
+		}
+		localization_key = SE_french_empire_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_french_communism
+		}
+		localization_key = SE_french_communism_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_anarchy
+		}
+		localization_key = SE_anarchy_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_carlist
+		}
+		localization_key = SE_carlist_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_unification_rome
+		}
+		localization_key = SE_unification_rome_title
+	}
+	
+}

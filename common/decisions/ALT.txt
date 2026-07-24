@@ -1,0 +1,149 @@
+ALT_alexi_health = {
+
+	ALt_alexi_health_timer = {
+		icon = GFX_decision_generic_brainwash
+		is_good = no
+		days_mission_timeout = 150
+		fixed_random_seed = no
+		
+		allowed = {
+			tag = ALT
+		}
+		
+		visible = {
+			has_country_leader = {
+				character = ALT_tsarevich_alexi
+				ruling_only = yes
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		available = {
+			always = no
+		}
+		
+		timeout_effect = {
+			add_stability = -0.75
+		}
+	}
+
+	ALT_research_grants = {
+		icon = GFX_USB_swap_out_the_medicine
+		
+		allowed = {
+			tag = ALT
+		}
+		
+visible = {
+    has_country_leader = {
+        character = ALT_tsarevich_alexi
+        ruling_only = yes
+    }
+}
+		
+		available = {
+			# Add conditions here if needed, or leave blank
+		}
+
+		modifier = {
+			research_speed_factor = 0.10
+		}
+		
+		ai_will_do = {
+			base = 2
+		}
+		
+		days_remove = 55
+		days_re_enable = 56
+		cancel_if_not_visible = yes
+		cost = 25
+		
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = ALt_alexi_health_timer
+				days = 55
+			}
+			add_to_variable = { alexi_breakthrough = 15 }
+			if = {
+				limit = { check_variable = { alexi_breakthrough >= 100 } }
+				set_variable = { alexi_breakthrough = 100 }				
+			}
+		}
+	}
+
+	ALT_restrict_publicity = {
+		icon = GFX_USB_swap_out_the_medicine
+		
+		allowed = {
+			tag = ALT
+		}
+		
+		visible = {
+    has_country_leader = {
+        character = ALT_tsarevich_alexi
+        ruling_only = yes
+    }
+       }
+		
+		available = {
+			# Add conditions here if needed, or leave blank
+		}
+
+		modifier = {
+			political_power_gain = -0.10
+			stability_weekly = -0.01
+		}
+		
+		ai_will_do = {
+			base = 2
+		}
+		
+		days_remove = 15
+		days_re_enable = 56
+		cancel_if_not_visible = yes
+		cost = 12
+		
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = ALt_alexi_health_timer
+				days = 23
+			}
+		}
+	}
+
+	ALT_call_rasutin = {
+		icon = GFX_USB_swap_out_the_medicine
+		
+		allowed = {
+			tag = ALT
+		}
+		
+     visible = {
+    has_country_leader = {
+        character = ALT_tsarevich_alexi
+        ruling_only = yes
+    }
+}
+		
+		available = {
+			
+		}
+		
+		ai_will_do = {
+			base = 2
+		}
+		
+		days_remove = 21
+		days_re_enable = 56
+		cancel_if_not_visible = yes
+		cost = 25
+		
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = ALt_alexi_health_timer
+				days = 30
+			}
+		}
+	}
+}
