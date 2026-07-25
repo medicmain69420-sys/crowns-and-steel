@@ -235,6 +235,134 @@ focus_tree = {
  		USA_congress_small_support = yes        
 		}
 	}
+	focus = {
+		id = crush_union_pacific
+		icon = GFX_focus_generic_expropriate_industrialist
+		cost = 5
+		prerequisite = { focus = reorganise_the_sothern_railroads }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = reorganise_the_sothern_railroads
+		x = -2
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+     add_timed_idea = {
+        idea = union_pacific_crushed
+        days = 365
+    }
+
+		}
+	}
+	focus = {
+		id = knock_down_the_kkk
+		icon = GFX_goal_USA_kkk
+		cost = 5
+		prerequisite = { focus = secure_the_mandate }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = secure_the_mandate
+		x = -2
+		y = 1
+
+		offset = {
+			x = -1
+			y = 0
+		}
+		completion_reward = {
+            add_political_power = 5
+		    custom_effect_tooltip = angry_kkk
+		}
+	}
+	focus = {
+		id = liberate_our_colonies
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 5
+		prerequisite = { focus = never_another_great_war }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = never_another_great_war
+		x = 0
+		y = 1
+
+		offset = {
+			x = 0
+			y = 0
+		}
+		completion_reward = {
+            add_political_power = 5
+			custom_effect_tooltip = freedom_usa
+			hidden_effect = {
+		   release = HAI
+		   release = CUB
+		   release = PAN
+		}
+		}
+	}
+		focus = {
+		id = renounce_the_league
+		icon = GFX_focus_generic_league_of_nations_dissolved
+		cost = 5
+		prerequisite = { focus = never_another_great_war }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = never_another_great_war
+		x = 2
+		y = 1
+
+		offset = {
+			x = 0
+			y = 0
+		}
+		completion_reward = {
+            add_political_power = -50
+			add_stability = 0.10
+			add_war_support = 0.125
+		}
+	}
+		focus = {
+		id = not_enough_usa
+		icon = GFX_goal_sinking_titanic
+		cost = 5
+		prerequisite = { focus = knock_down_the_kkk }
+		prerequisite = { focus = strengthen_minority_rights }
+		prerequisite = { focus = strengthen_women_rghts }
+		offset = {
+			x = 0
+			y = 0
+		}
+
+		relative_position_id = knock_down_the_kkk
+		x = 2
+		y = 1
+
+		offset = {
+			x = 0
+			y = 0
+		}
+		completion_reward = {
+            custom_effect_tooltip = delaying_inevitbale
+			hidden_effect = {
+			country_event = cas_usa.2	
+			}
+		}
+	}
 }
 focus_tree = {
 	id = usa_focus_civil_war
@@ -243,7 +371,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 10
+			add = 100
 			tag = USA
 		}
 		
@@ -260,11 +388,11 @@ focus_tree = {
 		id = the_sinking_titanic
 		icon = GFX_goal_sinking_titanic
 		cost = 5 
-		x = 10
-		y = 10
+		x = -25
+		y = -1
 
 		completion_reward = {
-			USA_congress_small_support = yes        
+			add_political_power = 50    
 		}
 	}	
 }

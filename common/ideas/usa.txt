@@ -1,6 +1,15 @@
 ideas = {
 
 	country = {
+    union_pacific_crushed = {
+		picture = idea_USA_union_pacific_railway
+        allowed = {
+            always = no
+        }
+        modifier = {
+            production_speed_rail_way_factor  = -0.10
+        }
+    }
 		downsized_army = {
 			picture = neutrality_idea
 			
