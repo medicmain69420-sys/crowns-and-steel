@@ -31,9 +31,9 @@ guiTypes = {
 		}
 		###
 		iconType = {
-			name = "superevents_spanish_civilwar"		
+			name = "second_american_civil_war"		
 			quadTextureSprite ="GFX_superevents_spanish_civilwar"
-			position = { x = 0 y = 0 }
+			position = { x = -250 y = -100 }
 			alwaystransparent = yes
 		}
 		iconType = {
@@ -252,7 +252,7 @@ guiTypes = {
 		buttonType ={
 			name ="superevents_button"
 			spriteType = "GFX_supereventsbutton"
-			position = { x= 225 y = 766 }
+			position = { x= -75 y = 675 }
 			Orientation = "UPPER_LEFT"
 			shortcut = "ESCAPE"
 			clicksound = click_close
@@ -282,7 +282,7 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "superevents_remark"
-			position = { x = 250 y = 785 }
+			position = { x = -140 y = 690 }
 			font = "hoi_30header"
 			format = CENTER
 			borderSize = {x = 0 y = 0}
